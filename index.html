@@ -1172,24 +1172,6 @@
     .video-lightbox-player video{max-height:50vh;}
   }
 
-  /* ---------- TESTIMONIALS ---------- */
-  .testi-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:22px;
-  }
-  .testi-card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:24px;
-    display:flex;align-items:center;justify-content:center;
-    min-height:210px;
-    transition:transform .3s ease, box-shadow .3s ease;
-  }
-  .testi-card:hover{transform:translateY(-8px);box-shadow:0 30px 55px -28px rgba(20,20,30,0.3);}
-  .testi-card img{max-width:100%;max-height:260px;width:auto;height:auto;border-radius:8px;}
-
   /* ---------- CONTACT ---------- */
   .contact-split{
     display:grid;
@@ -1270,7 +1252,7 @@
       <a href="#websites">Websites</a>
       <a href="#research">Research &amp; Socials</a>
       <a href="#ai-gallery">AI Projects</a>
-      <a href="#testimonials">Testimonials</a>
+      
     </div>
 
   </div>
@@ -1778,27 +1760,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Testimonials</div>
-      <h2>Feedback on the results</h2>
-      <p>A few messages from clients and founders.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <img src="assets/testimonial-1.png" alt="">
-      </div>
-      <div class="testi-card reveal">
-        <img src="assets/testimonial-2.png" alt="">
-      </div>
-      <div class="testi-card reveal">
-        <img src="assets/testimonial-3.png" alt="">
-      </div>
-    </div>
-  </div>
-</section>
+
 
 
 
@@ -1866,7 +1828,7 @@
   revealEls.forEach(el=>io.observe(el));
 
   // nav active state on scroll
-  const sections = ['home','websites','research','ai-gallery','testimonials'].map(id=>document.getElementById(id));
+  const sections = ['home','websites','research','ai-gallery'].map(id=>document.getElementById(id));
   const navLinks = document.querySelectorAll('#navtabs a');
   const spy = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
